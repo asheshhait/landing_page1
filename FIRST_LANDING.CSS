@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+ 
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #ab8f97;
+    color: white;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #ab8f97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: #86283e; */
+}
+#samlldiv{
+    background-color: #fff;
+    height: 79vh;
+    width: 70%;
+    background-color: #bfa5ab;
+    position: relative;
+    overflow: hidden;
+    
+}
+#bigpic{
+    /* background-color: #fff; */
+    height: 100%;
+    width: 58%;
+    margin-left: 22vw;
+    overflow: hidden;
+    
+    
+   
+}
+
+#bigpic img{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+   
+}
+#smallpic{
+    /* background-color: #fff; */
+    position: absolute;
+    height:460px;
+    width: 340px;
+    top: 9vw;
+    right:2.8vw ;
+    overflow: hidden;
+   
+}
+#smallpic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#text_div{
+    /* background-color: #fff; */
+    position: absolute;
+    height: 18vw;
+    width: 45%;
+    top:14vw;
+    left: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8vw;
+    
+}
+.smalltext{
+    /* background-color: #e75151; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+    position: relative;
+    overflow: hidden;
+    
+}
+.smalltext h1 {
+    font-size: 85px;
+    font-weight: bolder;
+    letter-spacing: 20px;
+    font-weight: 1000; /* max is 900 for most fonts */
+    margin: 0;
+    line-height: 60px; /* reduce space above/below text */
+    white-space: nowrap; /* keeps text in one line */
+    padding-left: 30px;
+    /* background-color: #fff; */
+    
+
+    
+}
+#white1{
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+#slider {
+    rotate: 90deg;
+    height: 3vw;
+    width: 100vh; /* use vh because it's rotated */
+    /* background-color: #fff; */
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: auto;
+    right: -21vw; /* adjust this value based on your layout */
+    /* transform: translateY(-50%) rotate(90deg); */
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+    white-space: nowrap;
+    gap: 2vw;
+    /* display: inline-block; */
+    white-space: nowrap;
+    animation: moving;
+    animation-duration: 32s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    
+}
+#slider h4{
+    -webkit-text-stroke: 1px white;
+    color: transparent; /* makes fill invisible so stroke is visible */
+   font-family: Arial, Helvetica, sans-serif;
+   height: 100%;
+   width: 100%;
+   font-size: 38px;
+   
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.circle-container {
+    position: absolute;
+    top: 10%;
+    left: 5vw;
+    width: 80px; /* Reduced size */
+    height: 80px; /* Reduced size */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateCircle 10s infinite linear;
+    /* background-color: #fff; */
+    border: none;
+    opacity: 0;
+  }
+  
+  @keyframes rotateCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .circle-text {
+    position: absolute;
+    width: 100%; /* Full circle width */
+    height: 100%; /* Full circle height */
+    transform-origin: center center;
+    /* background-color: #fff; */
+    font-size: 12px; /* Smaller text size */
+  }
+  
+  .circle-text span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 70px; /* 70px is the new radius for the circle */
+    font-size: 12px; /* Matching the smaller text size */
+    color: white;
+    /* background-color: #fff; */
+  }
+  .center-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text properly */
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  #nav{
+    /* background-color: #fff; */
+    height: 30px;
+    width :20%;
+    position: absolute;
+    left: 15vw;
+    top: 4vw;
+    opacity: 0;
+
+
+  }
+  #nav h3{
+    height: 100%;
+    width: 100%;
+    font-family: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .overlaywhite{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    opacity: 99;
+  }
+  
